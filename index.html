@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>중고폰 특가 판매</title>
-    
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .product-card { background: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 30px; max-width: 400px; text-align: center; }
-        .badge { background: #ff4757; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
-        h1 { color: #2d3436; font-size: 22px; margin: 20px 0; line-height: 1.4; }
-        img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
-        .price { font-size: 24px; color: #eb4d4b; font-weight: bold; margin-bottom: 20px; }
-        .price span { font-size: 16px; color: #636e72; text-decoration: line-through; margin-right: 10px; }
-        .cta-btn { background-color: #0984e3; color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
-        .cta-btn:hover { background-color: #74b9ff; transform: translateY(-2px); }
-    </style>
-</head>
     <!-- Start VWO Async V3.0 SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type="text/javascript" id="vwoCode">
@@ -31,19 +15,226 @@ window._vwo_code || (function() {
     var t=window,n=document;if(-1<n.URL.indexOf('__vwo_disable__')||t._vwo_code)return;var i=!1,o=n.currentScript,e={sT:settings_tolerance,hES:hide_element_style,hE:hide_element};try{e=Object.assign(JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config')),e)}catch(e){}var code={nonce:o.nonce,settings_tolerance:function(){return e.sT},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':e.hE},hide_element_style:function(){return'{'+e.hES+'}'},getVersion:function(){return version},finish:function(){var e;!i&&(i=!0,e=n.getElementById('_vis_opt_path_hides'))&&e.parentNode.removeChild(e)},finished:function(){return i},addScript:function(e){var t=n.createElement('script');t.src=e,o.nonce&&t.setAttribute('nonce',o.nonce),t.fetchPriority='high',n.head.appendChild(t)},init:function(){t._vwo_settings_timer=setTimeout(function(){code.finish()},this.settings_tolerance());var e=n.createElement('style');e.id='_vis_opt_path_hides',o.nonce&&e.setAttribute('nonce',o.nonce),e.textContent=this.hide_element()+this.hide_element_style(),n.head.appendChild(e),this.addScript('https://dev.visualwebsiteoptimizer.com/tag/'+account_id+'.js')}};t._vwo_code=code;code.init();})();
 </script> 
 <!--End VWO Async SmartCode -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kbeauty With Me - Torriden</title>
+
+    <style>
+        :root {
+            --torriden-blue: #a3c9e2;
+            --ribbon-blue: linear-gradient(180deg, #7eb6e2 0%, #4a90e2 100%);
+            --dark-blue: #2c5a94;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: "Malgun Gothic", sans-serif;
+            background: #ffffff url('https://images.unsplash.com/photo-1556229167-731913076866?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+
+        /* Header Area */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #4a90e2;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            color: #4a90e2;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+
+        /* Main Section */
+        .hero-container {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        /* The Blue Ribbon */
+        .ribbon {
+            background: var(--ribbon-blue);
+            color: white;
+            padding: 30px 60px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        .ribbon h1 {
+            margin: 0;
+            font-size: 52px;
+            letter-spacing: -2px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .sub-text {
+            font-size: 22px;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Diamond Button - Important for CTR */
+        .btn-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        #main-cta-button {
+            background: linear-gradient(90deg, #4b89c9 0%, #76b1e5 100%);
+            color: white;
+            padding: 15px 45px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+            transition: transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #main-cta-button:hover {
+            transform: scale(1.05);
+            background: #2c5a94;
+        }
+
+        /* Product Image Group */
+        .product-display {
+            position: absolute;
+            right: 5%;
+            bottom: 50px;
+            display: flex;
+            align-items: flex-end;
+            gap: -20px;
+        }
+
+        .product-display img {
+            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
+        }
+
+        /* Bottom Icons */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            padding: 50px 0;
+            background: rgba(255,255,255,0.4);
+        }
+
+        .feature-item {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--dark-blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            font-size: 30px;
+            background: white;
+        }
+
+        .feature-item p {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .feature-item span {
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
 <body>
 
-    <div class="product-card">
-        <span class="badge">HOT DEAL</span>
-        
-        <h1 id="promo-headline">[단독 특가] 이번 주말 한정! tất cả điện thoại giảm 20%</h1>
-        
-        <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba3f21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="iPhone">
-        
-        <div class="price"><span>1,000,000원</span> 800,000원</div>
-        
-        <button id="cta-button" class="cta-btn">보러가기</button>
+<header>
+    <div class="logo-box">
+        <div class="logo-icon">K</div>
+        <div class="logo-text">Kbeauty<br>With Me</div>
     </div>
+    <div style="font-weight: bold; color: #4a90e2;">Home &nbsp;&nbsp; Shop &nbsp;&nbsp; Specials &nbsp;&nbsp; About Us</div>
+</header>
+
+<main class="hero-container">
+    <div class="content-left">
+        <div class="ribbon">
+            <h1 id="test-headline">지금 구매하면<br>20% 할인!</h1>
+        </div>
+        
+        <p class="sub-text">수분이 필요한 순간, 토리든으로 채우세요!</p>
+
+        <div class="btn-container">
+            <button id="main-cta-button">
+                지금 보러 가기 ▶
+            </button>
+        </div>
+    </div>
+
+    <div class="product-display">
+        <img src="https://torriden.com/cdn/shop/files/DIVEIN_Serum_50ml_1.png?v=1701391585&width=300" style="height: 350px; z-index: 3;">
+        <img src="https://torriden.com/cdn/shop/files/DIVEIN_Toner_300ml_1.png?v=1701391621&width=300" style="height: 400px; margin-left: -50px;">
+        <img src="https://torriden.com/cdn/shop/files/DIVEIN_SoothingCream_100ml_1.png?v=1701391605&width=300" style="height: 250px; margin-left: -40px;">
+    </div>
+</main>
+
+<div class="features">
+    <div class="feature-item">
+        <div class="icon-circle">💧</div>
+        <p>수분 집중 케어</p>
+        <span>깊은 보습 공급</span>
+    </div>
+    <div class="feature-item">
+        <div class="icon-circle">🛡️</div>
+        <p>피부 장벽 강화</p>
+        <span>건강한 피부 케어</span>
+    </div>
+    <div class="feature-item">
+        <div class="icon-circle">🍃</div>
+        <p>민감 피부도 안심</p>
+        <span>저자극 포뮬러</span>
+    </div>
+</div>
 
 </body>
 </html>
