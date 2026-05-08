@@ -3,146 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linh Mobile - 중고폰 매장</title>
+    <title>중고폰 특가 판매</title>
+    
     <style>
-        /* Cấu hình cơ bản */
-        body {
-            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* Phần quảng cáo giảm giá ở đầu trang */
-        .top-banner {
-            background-color: #ff3e3e;
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .promo-container { border: 2px dashed #ff4757; padding: 20px; border-radius: 10px; display: inline-block; }
+        h1 { color: #2f3542; margin-bottom: 20px; }
+        .cta-btn {
+            background-color: #ff4757;
             color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-weight: bold;
-            font-size: 1.1rem;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-
-        /* Thanh điều hướng */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Danh sách sản phẩm */
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            padding-bottom: 20px;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            background-color: #eee;
-        }
-
-        .product-card h3 {
-            margin: 15px 0 5px;
-            font-size: 1.2rem;
-        }
-
-        .price {
-            color: #ff3e3e;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .buy-btn {
-            background-color: #007bff;
-            color: white;
+            padding: 15px 30px;
             border: none;
-            padding: 10px 20px;
             border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
             margin-top: 10px;
         }
-
-        .buy-btn:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #888;
-            font-size: 0.9rem;
-        }
+        .cta-btn:hover { background-color: #e84118; }
     </style>
 </head>
-<body>
+   <!-- Start VWO Async V3.0 SmartCode -->
+<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+<script type="text/javascript" id="vwoCode">
+window._vwo_code || (function() {        
+    var account_id = 1230758,
+        version = 3.0,
+        settings_tolerance = 2000,
+        hide_element = 'body',
+        hide_element_style =
+        'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important';
+    /* DO NOT EDIT BELOW THIS LINE */
+    var t=window,n=document;if(-1<n.URL.indexOf('__vwo_disable__')||t._vwo_code)return;var i=!1,o=n.currentScript,e={sT:settings_tolerance,hES:hide_element_style,hE:hide_element};try{e=Object.assign(JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config')),e)}catch(e){}var code={nonce:o.nonce,settings_tolerance:function(){return e.sT},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':e.hE},hide_element_style:function(){return'{'+e.hES+'}'},getVersion:function(){return version},finish:function(){var e;!i&&(i=!0,e=n.getElementById('_vis_opt_path_hides'))&&e.parentNode.removeChild(e)},finished:function(){return i},addScript:function(e){var t=n.createElement('script');t.src=e,o.nonce&&t.setAttribute('nonce',o.nonce),t.fetchPriority='high',n.head.appendChild(t)},init:function(){t._vwo_settings_timer=setTimeout(function(){code.finish()},this.settings_tolerance());var e=n.createElement('style');e.id='_vis_opt_path_hides',o.nonce&&e.setAttribute('nonce',o.nonce),e.textContent=this.hide_element()+this.hide_element_style(),n.head.appendChild(e),this.addScript('https://dev.visualwebsiteoptimizer.com/tag/'+account_id+'.js')}};t._vwo_code=code;code.init();})();
+</script> 
+<!--End VWO Async SmartCode --> 
+    <body>
 
-    <div class="top-banner">
-        🔥 [단독 특가] 이번 주말 한정! 모든 중고폰 20% 추가 할인 🔥
+    <div class="promo-container">
+        <h1 id="promo-text">[단독 특가] 이번 주말 한정! 모든 중고폰 20% 할인</h1>
+        
+        <br>
+        
+        <button id="cta-button" class="cta-btn">보러가기</button>
     </div>
-
-    <header>
-        <h1>Linh Mobile (린 모바일)</h1>
-        <p>최고 품질의 중고폰을 가장 저렴한 가격에 만나보세요</p>
-    </header>
-
-    <div class="container">
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=400&q=80" alt="iPhone 13">
-            <h3>아이폰 13 프로 (중고)</h3>
-            <p class="price">750,000원</p>
-            <p>상태: S급 (잔상 없음)</p>
-            <button class="buy-btn">구매하기</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&w=400&q=80" alt="Galaxy S21">
-            <h3>갤럭시 S21 (중고)</h3>
-            <p class="price">420,000원</p>
-            <p>상태: A급 (기스 약간)</p>
-            <button class="buy-btn">구매하기</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=400&q=80" alt="iPhone 12">
-            <h3>아이폰 12 (중고)</h3>
-            <p class="price">510,000원</p>
-            <p>상태: S급 (박스 포함)</p>
-            <button class="buy-btn">구매하기</button>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Linh Mobile. All rights reserved.</p>
-        <p>주소: 서울특별시 강남구 | 연락처: 010-1234-5678</p>
-    </footer>
 
 </body>
 </html>
