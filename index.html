@@ -5,7 +5,7 @@
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type="text/javascript" id="vwoCode">
 window._vwo_code || (function() {        
-    var account_id = 1230758,
+    var account_id = 1231055,
         version = 3.0,
         settings_tolerance = 2000,
         hide_element = 'body',
@@ -30,8 +30,7 @@ window._vwo_code || (function() {
             margin: 0;
             padding: 0;
             font-family: "Malgun Gothic", sans-serif;
-            background: #ffffff url('https://images.unsplash.com/photo-1556229167-731913076866?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-            background-size: cover;
+            background: #ffffff;
             overflow-x: hidden;
         }
 
@@ -41,33 +40,13 @@ window._vwo_code || (function() {
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid #eee;
         }
 
-        .logo-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: #4a90e2;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        .logo-text {
-            color: #4a90e2;
-            font-weight: bold;
-            line-height: 1.1;
-        }
+        .logo-box { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 40px; height: 40px; background: #4a90e2; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 24px; }
+        .logo-text { color: #4a90e2; font-weight: bold; line-height: 1.1; }
 
         /* Main Section */
         .hero-container {
@@ -76,6 +55,7 @@ window._vwo_code || (function() {
             display: flex;
             align-items: center;
             padding: 0 10%;
+            background-color: #f7fbff; /* Nền xanh nhạt nhẹ */
         }
 
         /* The Blue Ribbon */
@@ -88,29 +68,12 @@ window._vwo_code || (function() {
             border-radius: 5px;
             z-index: 2;
         }
+        .ribbon h1 { margin: 0; font-size: 52px; letter-spacing: -2px; line-height: 1.2; text-align: center; text-transform: uppercase; }
 
-        .ribbon h1 {
-            margin: 0;
-            font-size: 52px;
-            letter-spacing: -2px;
-            line-height: 1.2;
-            text-align: center;
-        }
+        .sub-text { font-size: 22px; margin-top: 20px; text-align: center; color: #333; font-weight: 500; }
 
-        .sub-text {
-            font-size: 22px;
-            margin-top: 20px;
-            text-align: center;
-            color: #333;
-            font-weight: 500;
-        }
-
-        /* Diamond Button - Important for CTR */
-        .btn-container {
-            margin-top: 40px;
-            text-align: center;
-        }
-
+        /* Diamond Button - CTR Target */
+        .btn-container { margin-top: 40px; text-align: center; }
         #main-cta-button {
             background: linear-gradient(90deg, #4b89c9 0%, #76b1e5 100%);
             color: white;
@@ -123,67 +86,33 @@ window._vwo_code || (function() {
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
             transition: transform 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-flex; height: 60px; align-items: center; justify-content: center;
         }
+        #main-cta-button:hover { transform: scale(1.05); background: #2c5a94; }
 
-        #main-cta-button:hover {
-            transform: scale(1.05);
-            background: #2c5a94;
-        }
-
-        /* Product Image Group */
+        /* Product Image Group - Fixed URLs */
         .product-display {
             position: absolute;
             right: 5%;
-            bottom: 50px;
+            top: 100px;
             display: flex;
             align-items: flex-end;
-            gap: -20px;
+            gap: -40px; /* Chồng lấp nhẹ các ảnh */
+            z-index: 1;
         }
 
         .product-display img {
             filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
+            max-width: 250px;
+            height: auto;
         }
 
         /* Bottom Icons */
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            padding: 50px 0;
-            background: rgba(255,255,255,0.4);
-        }
-
-        .feature-item {
-            text-align: center;
-            max-width: 150px;
-        }
-
-        .icon-circle {
-            width: 70px;
-            height: 70px;
-            border: 2px solid var(--dark-blue);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 15px;
-            font-size: 30px;
-            background: white;
-        }
-
-        .feature-item p {
-            font-weight: bold;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .feature-item span {
-            font-size: 13px;
-            color: #666;
-        }
+        .features { display: flex; justify-content: center; gap: 80px; padding: 50px 0; background: rgba(255,255,255,0.8); margin-top: -50px; position: relative; z-index: 2; }
+        .feature-item { text-align: center; max-width: 150px; }
+        .icon-circle { width: 70px; height: 70px; border: 2px solid var(--dark-blue); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 15px; font-size: 30px; background: white; }
+        .feature-item p { font-weight: bold; font-size: 16px; margin: 5px 0; }
+        .feature-item span { font-size: 13px; color: #666; }
     </style>
 </head>
 <body>
@@ -212,9 +141,9 @@ window._vwo_code || (function() {
     </div>
 
     <div class="product-display">
-        <img src="https://torriden.com/cdn/shop/files/DIVEIN_Serum_50ml_1.png?v=1701391585&width=300" style="height: 350px; z-index: 3;">
-        <img src="https://torriden.com/cdn/shop/files/DIVEIN_Toner_300ml_1.png?v=1701391621&width=300" style="height: 400px; margin-left: -50px;">
-        <img src="https://torriden.com/cdn/shop/files/DIVEIN_SoothingCream_100ml_1.png?v=1701391605&width=300" style="height: 250px; margin-left: -40px;">
+        <img src="https://via.placeholder.com/200x350/a3c9e2/ffffff?text=Serum" style="z-index: 3;">
+        <img src="https://via.placeholder.com/200x400/87bfe7/ffffff?text=Toner" style="margin-left: -50px;">
+        <img src="https://via.placeholder.com/200x250/b6d6ec/ffffff?text=Cream" style="margin-left: -40px;">
     </div>
 </main>
 
