@@ -17,152 +17,77 @@ window._vwo_code || (function() {
 <!--End VWO Async SmartCode -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kbeauty With Me - Torriden</title>
+    <title>Torriden - Kbeauty With Me</title>
 
     <style>
-        :root {
-            --torriden-blue: #a3c9e2;
-            --ribbon-blue: linear-gradient(180deg, #7eb6e2 0%, #4a90e2 100%);
-            --dark-blue: #2c5a94;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: "Malgun Gothic", sans-serif;
-            background: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Header Area */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(255, 255, 255, 0.8);
-            border-bottom: 1px solid #eee;
-        }
-
+        :root { --torriden-blue: #a3c9e2; --dark-blue: #2c5a94; }
+        body { margin: 0; padding: 0; font-family: 'Malgun Gothic', sans-serif; background-color: #f7fbff; color: #333; overflow-x: hidden; }
+        
+        header { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; background: white; border-bottom: 1px solid #e1e1e1; }
         .logo-box { display: flex; align-items: center; gap: 10px; }
-        .logo-icon { width: 40px; height: 40px; background: #4a90e2; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 24px; }
-        .logo-text { color: #4a90e2; font-weight: bold; line-height: 1.1; }
-
-        /* Main Section */
-        .hero-container {
-            position: relative;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            padding: 0 10%;
-            background-color: #f7fbff; /* Nền xanh nhạt nhẹ */
+        .logo-icon { width: 35px; height: 35px; background: #4a90e2; border-radius: 8px; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+        
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 10%; position: relative; }
+        
+        /* Ribbon giống hệt hình mẫu */
+        .ribbon { 
+            background: linear-gradient(180deg, #7eb6e2 0%, #4a90e2 100%); 
+            color: white; padding: 30px 50px; border-radius: 5px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center;
         }
+        .ribbon h1 { margin: 0; font-size: 42px; line-height: 1.2; font-weight: bold; }
+        
+        .sub-text { font-size: 20px; margin-top: 25px; font-weight: 500; }
 
-        /* The Blue Ribbon */
-        .ribbon {
-            background: var(--ribbon-blue);
-            color: white;
-            padding: 30px 60px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border-radius: 5px;
-            z-index: 2;
-        }
-        .ribbon h1 { margin: 0; font-size: 52px; letter-spacing: -2px; line-height: 1.2; text-align: center; text-transform: uppercase; }
-
-        .sub-text { font-size: 22px; margin-top: 20px; text-align: center; color: #333; font-weight: 500; }
-
-        /* Diamond Button - CTR Target */
-        .btn-container { margin-top: 40px; text-align: center; }
-        #main-cta-button {
-            background: linear-gradient(90deg, #4b89c9 0%, #76b1e5 100%);
-            color: white;
-            padding: 15px 45px;
-            font-size: 24px;
-            font-weight: bold;
-            border: 2px solid white;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        /* Nút bấm hình kim cương để đo CTR */
+        .cta-button { 
+            background: #4b89c9; color: white; padding: 18px 45px; 
+            font-size: 22px; font-weight: bold; border: 2px solid white; 
+            cursor: pointer; margin-top: 35px; 
             clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-            transition: transform 0.2s;
-            display: inline-flex; height: 60px; align-items: center; justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
         }
-        #main-cta-button:hover { transform: scale(1.05); background: #2c5a94; }
+        .cta-button:hover { background: var(--dark-blue); transform: scale(1.05); }
 
-        /* Product Image Group - Fixed URLs */
-        .product-display {
-            position: absolute;
-            right: 5%;
-            top: 100px;
-            display: flex;
-            align-items: flex-end;
-            gap: -40px; /* Chồng lấp nhẹ các ảnh */
-            z-index: 1;
-        }
-
-        .product-display img {
+        /* Phần hình ảnh đã được fix để hiển thị */
+        .product-display { flex: 1; display: flex; justify-content: flex-end; }
+        .img-container {
+            width: 450px; height: 450px;
+            background-image: url('https://image.oliveyoung.co.kr/uploads/images/goods/10/0000/0014/A00000014658101kr.jpg');
+            background-size: contain; background-repeat: no-repeat; background-position: center;
             filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
-            max-width: 250px;
-            height: auto;
         }
 
-        /* Bottom Icons */
-        .features { display: flex; justify-content: center; gap: 80px; padding: 50px 0; background: rgba(255,255,255,0.8); margin-top: -50px; position: relative; z-index: 2; }
-        .feature-item { text-align: center; max-width: 150px; }
-        .icon-circle { width: 70px; height: 70px; border: 2px solid var(--dark-blue); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 15px; font-size: 30px; background: white; }
-        .feature-item p { font-weight: bold; font-size: 16px; margin: 5px 0; }
-        .feature-item span { font-size: 13px; color: #666; }
+        .features { display: flex; justify-content: center; gap: 60px; padding: 50px; background: white; }
+        .feature-item { text-align: center; }
+        .icon { width: 65px; height: 65px; border: 2px solid #4a90e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 28px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-box">
-        <div class="logo-icon">K</div>
-        <div class="logo-text">Kbeauty<br>With Me</div>
-    </div>
-    <div style="font-weight: bold; color: #4a90e2;">Home &nbsp;&nbsp; Shop &nbsp;&nbsp; Specials &nbsp;&nbsp; About Us</div>
+    <div class="logo-box"><div class="logo-icon">K</div><div style="font-weight:bold; color:#4a90e2">Kbeauty With Me</div></div>
+    <nav style="font-weight: bold; color: #666;">Home &nbsp;&nbsp; Shop &nbsp;&nbsp; Specials &nbsp;&nbsp; About Us</nav>
 </header>
 
-<main class="hero-container">
-    <div class="content-left">
+<section class="hero">
+    <div class="content">
         <div class="ribbon">
             <h1 id="test-headline">지금 구매하면<br>20% 할인!</h1>
         </div>
-        
         <p class="sub-text">수분이 필요한 순간, 토리든으로 채우세요!</p>
-
-        <div class="btn-container">
-            <button id="main-cta-button">
-                지금 보러 가기 ▶
-            </button>
-        </div>
+        <button id="main-cta-button" class="cta-button">지금 보러 가기 ▶</button>
     </div>
 
     <div class="product-display">
-        <img src="https://via.placeholder.com/200x350/a3c9e2/ffffff?text=Serum" style="z-index: 3;">
-        <img src="https://via.placeholder.com/200x400/87bfe7/ffffff?text=Toner" style="margin-left: -50px;">
-        <img src="https://via.placeholder.com/200x250/b6d6ec/ffffff?text=Cream" style="margin-left: -40px;">
+        <div class="img-container"></div>
     </div>
-</main>
+</section>
 
 <div class="features">
-    <div class="feature-item">
-        <div class="icon-circle">💧</div>
-        <p>수분 집중 케어</p>
-        <span>깊은 보습 공급</span>
-    </div>
-    <div class="feature-item">
-        <div class="icon-circle">🛡️</div>
-        <p>피부 장벽 강화</p>
-        <span>건강한 피부 케어</span>
-    </div>
-    <div class="feature-item">
-        <div class="icon-circle">🍃</div>
-        <p>민감 피부도 안심</p>
-        <span>저자극 포뮬러</span>
-    </div>
+    <div class="feature-item"><div class="icon">💧</div><p><b>수분 집중 케어</b></p></div>
+    <div class="feature-item"><div class="icon">🛡️</div><p><b>피부 장벽 강화</b></p></div>
+    <div class="feature-item"><div class="icon">🍃</div><p><b>민감 피부 안심</b></p></div>
 </div>
 
 </body>
