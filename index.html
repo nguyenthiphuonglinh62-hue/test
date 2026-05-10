@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kbeauty With Me - Premium Care</title>
+
+    <style>
+        :root { --main-blue: #a3c9e2; --dark-blue: #2c5a94; --btn-blue: #4b89c9; }
+        body { margin: 0; padding: 0; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background-color: #f7fbff; color: #333; }
+        
+        /* Header chuyên nghiệp */
+        header { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo-box { display: flex; align-items: center; gap: 12px; font-weight: bold; color: var(--btn-blue); font-size: 20px; }
+        .logo-icon { width: 35px; height: 35px; background: var(--btn-blue); border-radius: 8px; color: white; display: flex; justify-content: center; align-items: center; }
+        
+        /* Hero Section - Giống y hệt bố cục giáo sư yêu cầu */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 10%; min-height: 500px; gap: 40px; }
+        
+        .content-left { flex: 1; }
+        .ribbon { 
+            background: linear-gradient(180deg, #7eb6e2 0%, #4a90e2 100%); 
+            color: white; padding: 35px 50px; border-radius: 10px; 
+            box-shadow: 0 15px 30px rgba(74, 144, 226, 0.3); text-align: center;
+            display: inline-block;
+        }
+        .ribbon h1 { margin: 0; font-size: 45px; line-height: 1.2; font-weight: 800; letter-spacing: -1px; }
+        .sub-text { font-size: 22px; margin-top: 30px; font-weight: 600; color: #555; }
+
+        /* Nút bấm hình kim cương đo CTR */
+        .cta-button { 
+            background: var(--btn-blue); color: white; padding: 20px 50px; 
+            font-size: 24px; font-weight: bold; border: 3px solid white; 
+            cursor: pointer; margin-top: 40px; 
+            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .cta-button:hover { background: var(--dark-blue); transform: translateY(-3px) scale(1.02); }
+
+        /* Phần hình ảnh "Sạch nhãn hiệu" và cực đẹp */
+        .content-right { flex: 1; display: flex; justify-content: center; }
+        .img-container {
+            width: 500px; height: 500px;
+            /* Sử dụng ảnh mỹ phẩm nghệ thuật không lộ nhãn hiệu */
+            background-image: url('https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=800&q=80');
+            background-size: cover; background-position: center;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .img-container::after {
+            content: "PREMIUM CARE";
+            position: absolute; bottom: 20px; right: 20px;
+            color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 2px;
+        }
+
+        /* Features chân trang */
+        .features { display: flex; justify-content: center; gap: 80px; padding: 60px; background: white; }
+        .feature-item { text-align: center; }
+        .icon { width: 70px; height: 70px; border: 2px solid #4a90e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 32px; background: #f0f8ff; }
+        .feature-item p { font-weight: bold; font-size: 18px; color: #2c5a94; }
+    </style>
+</head>
     <!-- Start VWO Async V3.0 SmartCode -->
 <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
 <script type="text/javascript" id="vwoCode">
 window._vwo_code || (function() {        
-    var account_id = 1231055,
+    var account_id = 1231178,
         version = 3.0,
         settings_tolerance = 2000,
         hide_element = 'body',
@@ -15,79 +76,31 @@ window._vwo_code || (function() {
     var t=window,n=document;if(-1<n.URL.indexOf('__vwo_disable__')||t._vwo_code)return;var i=!1,o=n.currentScript,e={sT:settings_tolerance,hES:hide_element_style,hE:hide_element};try{e=Object.assign(JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config')),e)}catch(e){}var code={nonce:o.nonce,settings_tolerance:function(){return e.sT},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':e.hE},hide_element_style:function(){return'{'+e.hES+'}'},getVersion:function(){return version},finish:function(){var e;!i&&(i=!0,e=n.getElementById('_vis_opt_path_hides'))&&e.parentNode.removeChild(e)},finished:function(){return i},addScript:function(e){var t=n.createElement('script');t.src=e,o.nonce&&t.setAttribute('nonce',o.nonce),t.fetchPriority='high',n.head.appendChild(t)},init:function(){t._vwo_settings_timer=setTimeout(function(){code.finish()},this.settings_tolerance());var e=n.createElement('style');e.id='_vis_opt_path_hides',o.nonce&&e.setAttribute('nonce',o.nonce),e.textContent=this.hide_element()+this.hide_element_style(),n.head.appendChild(e),this.addScript('https://dev.visualwebsiteoptimizer.com/tag/'+account_id+'.js')}};t._vwo_code=code;code.init();})();
 </script> 
 <!--End VWO Async SmartCode -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torriden - Kbeauty With Me</title>
-
-    <style>
-        :root { --torriden-blue: #a3c9e2; --dark-blue: #2c5a94; }
-        body { margin: 0; padding: 0; font-family: 'Malgun Gothic', sans-serif; background-color: #f7fbff; color: #333; overflow-x: hidden; }
-        
-        header { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; background: white; border-bottom: 1px solid #e1e1e1; }
-        .logo-box { display: flex; align-items: center; gap: 10px; }
-        .logo-icon { width: 35px; height: 35px; background: #4a90e2; border-radius: 8px; color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; }
-        
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 10%; position: relative; }
-        
-        /* Ribbon giống hệt hình mẫu */
-        .ribbon { 
-            background: linear-gradient(180deg, #7eb6e2 0%, #4a90e2 100%); 
-            color: white; padding: 30px 50px; border-radius: 5px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center;
-        }
-        .ribbon h1 { margin: 0; font-size: 42px; line-height: 1.2; font-weight: bold; }
-        
-        .sub-text { font-size: 20px; margin-top: 25px; font-weight: 500; }
-
-        /* Nút bấm hình kim cương để đo CTR */
-        .cta-button { 
-            background: #4b89c9; color: white; padding: 18px 45px; 
-            font-size: 22px; font-weight: bold; border: 2px solid white; 
-            cursor: pointer; margin-top: 35px; 
-            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
-        }
-        .cta-button:hover { background: var(--dark-blue); transform: scale(1.05); }
-
-        /* Phần hình ảnh đã được fix để hiển thị */
-        .product-display { flex: 1; display: flex; justify-content: flex-end; }
-        .img-container {
-            width: 450px; height: 450px;
-            background-image: url('https://image.oliveyoung.co.kr/uploads/images/goods/10/0000/0014/A00000014658101kr.jpg');
-            background-size: contain; background-repeat: no-repeat; background-position: center;
-            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
-        }
-
-        .features { display: flex; justify-content: center; gap: 60px; padding: 50px; background: white; }
-        .feature-item { text-align: center; }
-        .icon { width: 65px; height: 65px; border: 2px solid #4a90e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 28px; }
-    </style>
-</head>
 <body>
 
 <header>
-    <div class="logo-box"><div class="logo-icon">K</div><div style="font-weight:bold; color:#4a90e2">Kbeauty With Me</div></div>
-    <nav style="font-weight: bold; color: #666;">Home &nbsp;&nbsp; Shop &nbsp;&nbsp; Specials &nbsp;&nbsp; About Us</nav>
+    <div class="logo-box"><div class="logo-icon">K</div><div>Kbeauty With Me</div></div>
+    <nav style="font-weight: bold; color: #777;">Home &nbsp;&nbsp; Shop &nbsp;&nbsp; Specials &nbsp;&nbsp; About Us</nav>
 </header>
 
 <section class="hero">
-    <div class="content">
+    <div class="content-left">
         <div class="ribbon">
             <h1 id="test-headline">지금 구매하면<br>20% 할인!</h1>
         </div>
-        <p class="sub-text">수분이 필요한 순간, 토리든으로 채우세요!</p>
+        <p class="sub-text">수분이 필요한 순간, 프리미엄 케어로 채우세요!</p>
         <button id="main-cta-button" class="cta-button">지금 보러 가기 ▶</button>
     </div>
 
-    <div class="product-display">
+    <div class="content-right">
         <div class="img-container"></div>
     </div>
 </section>
 
 <div class="features">
-    <div class="feature-item"><div class="icon">💧</div><p><b>수분 집중 케어</b></p></div>
-    <div class="feature-item"><div class="icon">🛡️</div><p><b>피부 장벽 강화</b></p></div>
-    <div class="feature-item"><div class="icon">🍃</div><p><b>민감 피부 안심</b></p></div>
+    <div class="feature-item"><div class="icon">💧</div><p>수분 집중 케어</p></div>
+    <div class="feature-item"><div class="icon">🛡️</div><p>피부 장벽 강화</p></div>
+    <div class="feature-item"><div class="icon">🍃</div><p>저자극 포뮬러</p></div>
 </div>
 
 </body>
